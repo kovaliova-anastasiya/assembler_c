@@ -1,0 +1,19 @@
+.data
+x00 -1  //it is for the inversion of the sign
+x01 3  //it is a
+x02 2  //it is b
+x03 1 //it is c
+x04 10  //it is x
+x05 ?  //it is the result
+.code
+mov Ak x01
+mul Ak x04
+mul Ak x04
+add Ak x03
+mov x05 Ak // it is ax2+c
+mov Ak x04
+mul Ak x02
+mul Ak x00 //it is -bx
+add Ak x05
+mov x05 Ak
+end
